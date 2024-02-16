@@ -23,7 +23,7 @@ export const Footer = () => {
         <>
 
 
-            <footer className="  bg-slate-200 w-[100%] bottom-0 h-96 ">
+            <footer className="  bg-slate-200 w-[100%]  b h-96 ">
                 <div className="mx-auto w-[100%] py-7 max-w-7xl  ">
                     <div className="grid grid-cols-1 justify-between md:grid-cols-2 ">
                         <Typography variant="h5" className="mb-6 p-2 flex flex-col justify-between items-start">

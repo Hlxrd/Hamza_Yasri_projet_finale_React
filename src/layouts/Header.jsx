@@ -11,6 +11,7 @@ import {
     IconButton,
     Card,
 } from "@material-tailwind/react";
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -18,6 +19,8 @@ import {
 
 export const Header = () => {
     const [openNav, setOpenNav] = React.useState(false);
+
+    let navigate = useNavigate()
 
     React.useEffect(() => {
         window.addEventListener(
@@ -75,7 +78,7 @@ export const Header = () => {
 
 
 
-            <Navbar className="sticky top-0 z-50 h-max max-w-full bg-gray-200 rounded-none lg:px-8 lg:py-4" style={{backgroundImage:`url(${navbg}) ` , backgroundRepeat:`no-repeat` , backgroundPosition:`center` , backgroundSize:`cover`}}>
+            <Navbar className="sticky top-0 z-50 h-max  max-w-full bg-gray-200 rounded-none lg:px-8 lg:py-2" style={{backgroundImage:`url(${navbg}) ` , backgroundRepeat:`no-repeat` , backgroundPosition:`center` , backgroundSize:`cover`}}>
                 <div className="flex items-center justify-around  text-blue-gray-900">
                     <Typography
                         as="a"
@@ -83,7 +86,7 @@ export const Header = () => {
                         className="w-52 mr-4 cursor-pointer py-1.5 font-medium flex items-center"
                     >
                         <img className='w-[30%] ' src={Logo} alt="" />
-                        <h1 className='text-4xl font-serif font-bold '><span className='text-red-500'>S</span>ky <span className='text-yellow-700'>S</span>tride</h1>
+                        <h1 className='text-3xl font-serif font-bold ' onClick={()=>{navigate("/")}}><span className='text-red-500'>S</span>ky <span className='text-yellow-700'>S</span>tride</h1>
                     </Typography>
                     <div className="flex items-center   gap-4">
                         <div className="mr-4 hidden lg:block">{navList}</div>

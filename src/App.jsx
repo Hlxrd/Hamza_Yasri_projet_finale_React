@@ -5,17 +5,23 @@ import { About } from './pages/about/About';
 import { Header } from './layouts/Header';
 import { Footer } from './layouts/Footer';
 import { Contact } from './pages/contact/Contact';
+import { ContextProvider } from './utiles/ContextProvider';
+import { Erro } from './pages/error/Erro';
 
 const App = () => {
     return (
         <>
-            <Header />
-            <Routes >
-                <Route path='/' element={<Home />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/contact' element={<Contact/>}/>
-            </Routes >
-<Footer/>
+            
+            <ContextProvider>
+                <Header />
+                <Routes >
+                    <Route path='/*' element={<Erro/>}/>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/contact' element={<Contact />} />
+                </Routes >
+            <Footer/>
+            </ContextProvider>
         </>
     );
 };
