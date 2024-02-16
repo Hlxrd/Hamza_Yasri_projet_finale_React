@@ -4,6 +4,7 @@ import { HeroSec } from './components/HeroSec';
 import { CardSec } from './components/CardSec';
 import { NavTab } from './components/NavTab';
 import { Footer } from 'flowbite-react';
+import { LookBookSec } from './components/LookBookSec';
 export const Home = () => {
 
 
@@ -13,6 +14,7 @@ export const Home = () => {
             <HeroSec/>
             <CardSec/>
             <NavTab/>
+            <LookBookSec/>
         </>
     );
 };
